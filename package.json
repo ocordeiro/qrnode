@@ -1,0 +1,31 @@
+{
+  "name": "qrnode",
+  "version": "0.0.1",
+  "description": "QR Code decoder from local file or URL without canvas",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alamcordeiro/qrnode.git"
+  },
+  "author": {
+    "name": "Alan Cordeiro",
+    "email": "mail@alancordeiro.com"
+  },
+  "license": "Apache",
+  "readmeFilename": "readme.md",
+  "readme": "",
+  "_id": "qrnode@0.0.1",
+  "dist": {},
+  "_npmVersion": "1.1.63",
+  "_npmUser": {
+    "name": "Alan Cordeiro",
+    "email": "mail@alancordeiro.com"
+  },
+  "bugs": {
+    "url": "https://github.com/alamcordeiro/qrnode/issues"
+  },
+  "homepage": "https://github.com/alamcordeiro/qrnode",
+  "dependencies": {
+    "jimp": "^0.1.4"
+  }
+}
