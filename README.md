@@ -10,14 +10,14 @@ Example usage:
     
     // From URL
     qrnode.detect("https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=Teste", function(result){
-      console.log("Decode from url:", result);
+      console.log(result);
     });
 
     // From local File
     qrnode.detect("qrcode.png", function(result){
-      console.log("Decode from local file:", result);
+      console.log(result);
     });
 
- ## License ##
+ # License #
 
 qrnode is licensed under the Apache license.

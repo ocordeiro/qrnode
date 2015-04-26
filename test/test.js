@@ -1,4 +1,4 @@
-var qrnode = require('./index');
+var qrnode = require('../index');
 
 qrnode.detect("https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=Teste", function(result){
   console.log("Decode from url:", result);
