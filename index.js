@@ -1,26 +1,13 @@
-var qrcode  = require('./lib/qrcode'),
-    Jimp    = require("jimp"),
-    request = require('request');
+const qrcode = require('./lib/qrcode')
+const Jimp = require('jimp')
 
-var image;
-
-module.exports.detect = function(im, callback){
-  if(isUrl(im)){
-      // Download image from url and process
-      request({url:im, encoding:null}, function(err,res,body){
-        image = new Jimp(body, res.headers['content-type'], function () {  
-          qrcode.process(image.bitmap, callback);  
-        });
-      });
-  }else{
-      // Process image from local file
-      image = new Jimp(im, function () {  
-         qrcode.process(image.bitmap, callback);
-      });
-   }
-}
-
-function isUrl(s){
-  var regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
-  return regexp.test(s);
+module.exports.detect = (source, cb) => {
+  return new Promise((resolve, reject) => {
+    Jimp.read(source).then(image => {
+      qrcode.process(image.bitmap, decode => {
+        cb(decode)
+        resolve(decode)
+      })
+    }).catch(reject)
+  })
 }

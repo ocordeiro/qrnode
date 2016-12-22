@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/alamcordeiro/qrnode",
   "dependencies": {
-    "jimp": "^0.1.4",
-    "request": "^2.55.0"
+    "jimp": "^0.2.27"
   }
 }
